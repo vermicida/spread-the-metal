@@ -18,7 +18,9 @@ build: ## Build the app
 
 dist: build ## Prepare the deployment package
 	@mkdir -p ./dist
-	@zip -q ./dist/function.zip ./build/main
+	@cd ./build
+	@zip -q ./dist/function.zip ./main
+	@cd ..
 
 clean: ## Clean intermediate artifacts
 	@rm -rf ./build ./dist
