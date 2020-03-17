@@ -39,9 +39,9 @@ func New() *Config {
 		},
 		DynamoDB: DynamoDBConfig{
 			DefaultRegion:           getEnv("DEFAULT_REGION", "eu-west-1"),
-			SongsTableName:          getEnv("DEFAULT_REGION", "stm-songs"),
-			SongsTableKeyDateFormat: getEnv("DEFAULT_REGION", "20060102"),
-			SongsTableKeyHourFormat: getEnv("DEFAULT_REGION", "15"),
+			SongsTableName:          getEnv("SONGS_TABLE_NAME", "stm-songs"),
+			SongsTableKeyDateFormat: getEnv("DATE_FORMAT", "20060102"),
+			SongsTableKeyHourFormat: getEnv("TIME_FORMAT", "15"),
 		},
 	}
 }
